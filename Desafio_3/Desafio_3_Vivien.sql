@@ -79,12 +79,12 @@ select count(*) from DadosCovid where descPais="Brazil"
 select avg(novosCasos) where descPais="France"
 -- > 1141.632
 
-select count(novosCasos) from DadosCovid where dataOcorrencia="2020-05-26T00:00:00Z";
--- > 215
+select sum(novosCasos) from DadosCovid where dataOcorrencia="2020-05-26T00:00:00Z";
+-- > 99023
 
 
-select count(novosObitos) from DadosCovid where dataOcorrencia="2020-05-26T00:00:00Z";
--- > 215
+select sum(novosObitos) from DadosCovid where dataOcorrencia="2020-05-26T00:00:00Z";
+-- > 1493
 
 describe extended DadosCovid;
 -- > arquivo .odt
